@@ -98,3 +98,27 @@ aside.sidebar {
     padding: 1em;
     margin: 1em;
   }
+
+/* custom header styles */
+.custom-header .column1 {
+  background-color: #ffe4e1;
+}
+.custom-header .column2 {
+  background-color: #c2d6d6;
+}
+.custom-header .column3 {
+  background-color: #f2d7d5;
+}
+
+/* column text styling */
+.custom-header .column-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #000;
+}
+.custom-header .column-text {
+  font-size: 1.2rem;
+  color: #333;
+}
