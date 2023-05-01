@@ -1,0 +1,202 @@
+main {
+  max-width: 95%;
+  width: 100%;
+  margin: 2em auto;
+}
+
+.site-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f1f1f1;
+}
+
+/* Used ChatGPT as a reference for styling the body */
+body::before {
+  left: calc(50% - 600px);
+  width: calc(50% - 650px);
+}
+
+body::after {
+  right: calc(50% - 600px);
+  width: calc(50% - 650px);
+}
+
+
+body::before,
+body::after {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #629BBC;
+  z-index: -1;
+}
+
+body::before {
+  left: 0;
+}
+
+body::after {
+  right: 0;
+}
+
+header {
+  background-color: #ffffff;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer {
+  margin: 0 auto;
+  display: flex;
+  background-color: #001b2e;
+  padding: 1em 3em;
+}
+
+footer>p {
+  margin-bottom: 0;
+}
+
+nav.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+nav.navbar {
+  background-color: #001B2E;
+  position: sticky
+}
+
+a:focus {
+  outline: none !important;
+  border: 1px solid #ADB6C4;
+  box-shadow: 0 0 5px #719ECE;
+}
+
+.navbar-dark a.navbar-brand,
+.navbar-dark a.navbar-brand:focus,
+.navbar-dark a.navbar-brand:active {
+  color: #FFEFD3;
+  font-family: 'Staatliches', cursive;
+  text-shadow: -1px 1px 2px #000,
+    1px 1px 2px #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.navbar-dark .navbar-nav a.nav-link:hover,
+.navbar-dark .navbar-nav a.nav-link:focus {
+  background-color: #283c5c;
+  color: white;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav a.nav-link {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+#brand {
+  color: #FFEFD3;
+  font-size: 3.5em;
+  text-shadow: -1px 1px 2px #000,
+    1px 1px 2px #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000;
+  font-family: 'Staatliches', cursive;
+  text-align: center;
+}
+
+div.card-body {
+  padding: 0;
+}
+
+#header {
+  background-color: #ffab71;
+}
+
+.mask {
+  height: 400px;
+}
+
+.mt-5 {
+  margin: 3rem auto 3rem;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a.nav-link,
+figcaption {
+  font-family: 'Nunito', sans-serif !important;
+}
+
+.bg-image {
+  background-image: url('https://gcdnb.pbrd.co/images/NbKaEWzeOPYC.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+div.padding {
+  padding: 2em;
+}
+
+.collapsible-link::before {
+  content: '';
+  width: 14px;
+  height: 2px;
+  background: #333;
+  position: absolute;
+  top: calc(50% - 1px);
+  right: 1rem;
+  display: block;
+  transition: all 0.3s;
+}
+
+/* Vertical line */
+.collapsible-link::after {
+  content: '';
+  width: 2px;
+  height: 14px;
+  background: #333;
+  position: absolute;
+  top: calc(50% - 7px);
+  right: calc(1rem + 6px);
+  display: block;
+  transition: all 0.3s;
+}
+
+.collapsible-link[aria-expanded='true']::after {
+  transform: rotate(90deg) translateX(-1px);
+}
+
+.collapsible-link[aria-expanded='true']::before {
+  transform: rotate(180deg);
+}
+
+.faq {
+  padding: 1em;
+}
+
+.collapse > .p-5 {
+  padding: 1.5em!important;
+}

@@ -10,31 +10,83 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Staatliches&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/statistics.html">Statistics</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="appeal.html">File an Appeal</a>
-              </li>
-            </ul>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <a class="navbar-brand" href="#">Take It to the Streets</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="appeal.html">File an Appeal</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="statistics.html">Top Violations</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <main>
+    <div class="card">
+      <div class="card-body">
+        <div id="header" class="p-5 text-center">
+          <h1 id="brand" class="mb-3">Take It to the Streets</h1>
+          <h3 class="mb-3"><strong>Empowering Chicago's Ward 44 to Win Parking Ticket Appeals</strong></h3>
+          <p class="mb-3">Take It to the Streets is a nonprofit organization dedicated to helping people contest and win
+            appeals on parking violations in the city of Chicago. The group's mission is to educate residents on how to
+            appeal and win parking ticket cases in court, targeting a ward-by-ward basis. The website provides handouts,
+            templates, and resources for residents of Ward 44 to successfully plead their case in front of a judge. The
+            website also includes statistics, links to resources, and a step-by-step guide to appealing parking tickets.
+          </p>
+        </div>
+        <section class="section mt-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <div>
+                  <figure class="figure">
+                    <img alt="Pie chart showing percentage of dismissed and liable tickets that have been appealed in ward 44" class="img-fluid"
+                    src="assets/hearings.png" />
+                    <figcaption class="figure-caption">Hearing results of contested parking violation appeals in ward 44 since 1996 (Credit: ProPublica).</figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-5 ml-auto d-flex align-items-center mt-4 mt-md-0">
+                <div>
+                  <h2>Did you know that 60% of drivers who appeal their parking ticket in Ward 44 win their case?</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="text-center" style="height: 400px;">
+          <div class="bg-image">
+            <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+              <div class="d-flex justify-content-center align-items-center h-100">
+                <div class="text-white">
+                  <h2 class="mb-3">You can beat your ticket too!</h2>
+                  <a class="btn btn-outline-light btn-lg" href="appeal.html" role="button">File an Appeal</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-    </nav>
-
+      </div>
+    </div>
     <div class="jumbotron">
         <h1 class="display-4">Hello, world!</h1>
         <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
@@ -67,5 +119,10 @@
         <a href="#" class="list-group-item list-group-item-action">How to Request a Hearing</a>
         <a href="#" class="list-group-item list-group-item-action">How to Prepare Your Appeal Statement</a>
     </div>
-
+  </main>
+    <footer class="text-white text-center text-lg-start">
+      <p>© 2023 Take It to the Streets</p>
+      <p>Angelica Madera, Jason Cheng, Ryan Manthy and Sean Cummings | Technical Communication Final Project</p>
+    </footer>
 </body>
+</html>
