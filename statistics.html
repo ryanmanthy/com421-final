@@ -1,127 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take It to the Streets: Top Violations</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Staatliches&display=swap"
+      rel="stylesheet">
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Take It to the Streets: Top Violations</title>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
-</head>
-
-<body>
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <a class="navbar-brand" href="#">Take It to the Streets</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="appeal.html">File an Appeal</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="statistics.html">Top Violations<span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact Us</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <main>
-    <div class="card">
-      <div class="card-body padding">
-        <h1>Top Parking Offenses in Ward 44</h1>
-        <p>On this page, we present the top parking violations in Ward 44, accompanied by brief descriptions and valuable resources to assist you in challenging and winning your parking ticket. Furthermore, we include the success rate of appeals for each violation, enabling you to assess your chances of success in court.</p>
-        <div class="text-center">
-          <figure class="figure">
-            <img alt="Bar graph demonstrating the top five parking offenses in ward 44" class="img-fluid w-50"
-            src="assets/bar graph.png" />
-            <figcaption class="figure-caption">Top five parking violations in Ward 44 (Credit: ProPublica).</figcaption>
-          </figure>
-        </div>
-        <!-- Accordion -->
-        <div id="accordionExample" class="accordion shadow">
-          <!-- Accordion item 1 -->
-          <div class="card">
-            <div id="headingOne" class="card-header bg-white shadow-sm border-0">
-              <h4 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseOne"
-                  aria-expanded="true" aria-controls="collapseOne"
-                  class="d-block position-relative text-dark collapsible-link py-2">Expired plates or
-                  temporary registration</a></h4>
-            </div>
-            <div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample" class="collapse show">
-              <div class="card-body p-5">
-                <div class = "faq">
-                <h5 class="font-weight-bold m-0">What is this offense?</h5>
-                <p class="font-weight-medium m-0">Expired plates or temporary registration refers to the situation when a vehicle is parked on a public road with expired or missing license plates or temporary registration.</p>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <a class="navbar-brand" href="index.html">Take It to the Streets</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html"
+              >Home<span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="appeal.html">File an Appeal</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="statistics.html"
+              >Top Violations<span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <div class="card">
+        <div class="card-body padding">
+          <h1 class="h1-responsive font-weight-bold text-center my-4">
+            Top Parking Offenses in Ward 44
+          </h1>
+          <p>
+            On this page, we present the top parking violations in Ward 44,
+            accompanied by brief descriptions and valuable resources to assist
+            you in challenging and winning your parking ticket. Furthermore, we
+            include the success rate of appeals for each violation, enabling you
+            to assess your chances of success in court.
+          </p>
+          <div class="text-center">
+            <figure class="figure">
+              <img
+                alt="Bar graph demonstrating the top five parking offenses in ward 44"
+                class="img-fluid w-50"
+                src="assets/bargraph.png">
+              <figcaption class="figure-caption">
+                Top five parking violations in Ward 44 (Credit: ProPublica).
+              </figcaption>
+            </figure>
+          </div>
+          <!-- Accordion -->
+          <div id="accordionExample" class="accordion shadow">
+            <!-- Accordion item 1 -->
+            <div class="card">
+              <div
+                id="headingOne"
+                class="card-header bg-white shadow-sm border-0">
+                <h4 class="mb-0 font-weight-bold">
+                  <a
+                    href="#"
+                    data-toggle="collapse"
+                    data-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                    class="d-block position-relative text-dark collapsible-link py-2"
+                    >Expired plates or temporary registration</a
+                  >
+                </h4>
               </div>
-              <div class = "faq">
-                <h5 class="font-weight-bold m-0">Why is this violation common in Ward 44?</h5>
-                <p class="font-weight-medium m-0">The violation is common in Ward 44 because it is a residential area that experiences heavy traffic due to the presence of Wrigley Field stadium. This creates limited parking availability, causing residents to park their vehicles on the street for longer periods, leading to an increased likelihood of receiving a parking ticket for expired plates or temporary registration.</p>
-              </div>
-              <div class = "faq">
-                <h5 class="font-weight-bold m-0">What is the success rate for this appeal?</h5>
-                <div class="text-center">
-                <figure class="figure w-50">
-                  <img alt="Pie chart showing percentage of dismissed and liable expired plates or temporary registration violations that have been appealed in ward 44" class="img-fluid"
-                  src="assets/expired plates_temporary registration.png" />
-                  <figcaption class="figure-caption">Hearing results of contested expired plates or temporary registration parking violation appeals in ward 44 since 1996. (Credit: ProPublica)</figcaption>
-                </figure>
-              </div>
-                <p class="font-weight-medium m-0">68% of the contested parking violations in ward 44 have successfully been dismissed.</p>
-              </div>
-              </div>
-              <div class = "faq">
-                <h5 class="font-weight-bold m-0">How many people have challenged this appeal in the past?</h5>
-                <p class="font-weight-medium m-0">A total of 14,217 appeals have been recorded for this particular offense. This suggests that only 11% of those who received the violation attempted to contest it.</p>
-              </div>
+              <div
+                id="collapseOne"
+                aria-labelledby="headingOne"
+                data-parent="#accordionExample"
+                class="collapse show">
+                <div class="card-body p-5">
+                  <div class="faq">
+                    <h5 class="font-weight-bold m-0">What is this offense?</h5>
+                    <p class="font-weight-medium m-0">
+                      Expired plates or temporary registration refers to the
+                      situation when a vehicle is parked on a public road with
+                      expired or missing license plates or temporary
+                      registration.
+                    </p>
+                  </div>
+                  <div class="faq">
+                    <h5 class="font-weight-bold m-0">
+                      Why is this violation common in Ward 44?
+                    </h5>
+                    <p class="font-weight-medium m-0">
+                      The violation is common in Ward 44 because it is a
+                      residential area that experiences heavy traffic due to the
+                      presence of Wrigley Field stadium. This creates limited
+                      parking availability, causing residents to park their
+                      vehicles on the street for longer periods, leading to an
+                      increased likelihood of receiving a parking ticket for
+                      expired plates or temporary registration.
+                    </p>
+                  </div>
+                  <div class="faq">
+                    <h5 class="font-weight-bold m-0">
+                      What is the success rate for this appeal?
+                    </h5>
+                    <div class="text-center">
+                      <figure class="figure w-50">
+                        <img
+                          alt="Pie chart showing percentage of dismissed and liable expired plates or temporary registration violations that have been appealed in ward 44"
+                          class="img-fluid"
+                          src="assets/expiredplates.png">
+                        <figcaption class="figure-caption">
+                          Hearing results of contested expired plates or
+                          temporary registration parking violation appeals in
+                          ward 44 since 1996. (Credit: ProPublica)
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <p class="font-weight-medium m-0">
+                      68% of the contested parking violations in ward 44 have
+                      successfully been dismissed.
+                    </p>
+                  </div>
+                </div>
+                <div class="faq">
+                  <h5 class="font-weight-bold m-0">
+                    How many people have challenged this appeal in the past?
+                  </h5>
+                  <p class="font-weight-medium m-0">
+                    A total of 14,217 appeals have been recorded for this
+                    particular offense. This suggests that only 11% of those who
+                    received the violation attempted to contest it.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
 
           <!-- Accordion item 2 -->
           <div class="card">
-            <div id="headingTwo" class="card-header bg-white shadow-sm border-0">
-              <h4 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseTwo"
-                  aria-expanded="false" aria-controls="collapseTwo"
-                  class="d-block position-relative collapsed text-dark collapsible-link py-2">Street
-                  cleaning</a></h4>
+            <div
+              id="headingTwo"
+              class="card-header bg-white shadow-sm border-0">
+              <h4 class="mb-0 font-weight-bold">
+                <a
+                  href="#"
+                  data-toggle="collapse"
+                  data-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                  class="d-block position-relative collapsed text-dark collapsible-link py-2"
+                  >Street cleaning</a
+                >
+              </h4>
             </div>
-            <div id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample" class="collapse">
+            <div
+              id="collapseTwo"
+              aria-labelledby="headingTwo"
+              data-parent="#accordionExample"
+              class="collapse">
               <div class="card-body p-5">
-                <div class = "faq">
+                <div class="faq">
                   <h5 class="font-weight-bold m-0">What is this offense?</h5>
-                  <p class="font-weight-medium m-0">Street cleaning violation occurs when a vehicle is parked on a street during the scheduled street cleaning hours. In most cities, streets are cleaned on a regular schedule, and signs are posted on the streets indicating the time and date of street cleaning. If a parked vehicle obstructs the street cleaning process, it may receive a parking ticket.</p>
+                  <p class="font-weight-medium m-0">
+                    Street cleaning violation occurs when a vehicle is parked on
+                    a street during the scheduled street cleaning hours. In most
+                    cities, streets are cleaned on a regular schedule, and signs
+                    are posted on the streets indicating the time and date of
+                    street cleaning. If a parked vehicle obstructs the street
+                    cleaning process, it may receive a parking ticket.
+                  </p>
                 </div>
-                <div class = "faq">
-                  <h5 class="font-weight-bold m-0">Why is this violation common in Ward 44?</h5>
-                  <p class="font-weight-medium m-0">This violation is common in Ward 44 because the ward has designated street cleaning days where parking is prohibited on certain streets for a period of time to allow for street cleaning. Additionally, the ward is a densely populated area with limited parking availability, which can make finding alternative parking options during street cleaning hours difficult for motorists.</p>
+                <div class="faq">
+                  <h5 class="font-weight-bold m-0">
+                    Why is this violation common in Ward 44?
+                  </h5>
+                  <p class="font-weight-medium m-0">
+                    This violation is common in Ward 44 because the ward has
+                    designated street cleaning days where parking is prohibited
+                    on certain streets for a period of time to allow for street
+                    cleaning. Additionally, the ward is a densely populated area
+                    with limited parking availability, which can make finding
+                    alternative parking options during street cleaning hours
+                    difficult for motorists.
+                  </p>
                 </div>
-                <div class = "faq">
-                <div class="text-center">
-                  <figure class="figure w-50">
-                    <img alt="Pie chart showing percentage of dismissed and liable street cleaning violations that have been appealed in ward 44" class="img-fluid"
-                    src="assets/street cleaning.png" />
-                    <figcaption class="figure-caption">Hearing results of contested street cleaning parking violation appeals in ward 44 since 1996. (Credit: ProPublica)</figcaption>
-                  </figure>
-              </div>
-                  <p class="font-weight-medium m-0">48% of the contested parking violations in ward 44 have successfully been dismissed.</p>
+                <div class="faq">
+                  <div class="text-center">
+                    <figure class="figure w-50">
+                      <img
+                        alt="Pie chart showing percentage of dismissed and liable street cleaning violations that have been appealed in ward 44"
+                        class="img-fluid"
+                        src="assets/streetcleaning.png">
+                      <figcaption class="figure-caption">
+                        Hearing results of contested street cleaning parking
+                        violation appeals in ward 44 since 1996. (Credit:
+                        ProPublica)
+                      </figcaption>
+                    </figure>
+                    <p class="font-weight-medium m-0">
+                      48% of the contested parking violations in ward 44 have
+                      successfully been dismissed.
+                    </p>
+                  </div>
                 </div>
-                <div class = "faq">
-                  <h5 class="font-weight-bold m-0">How many people have challenged this appeal in the past?</h5>
-                  <p class="font-weight-medium m-0">According to the pie chart presented above, a total of 4,518 appeals have been recorded for this particular offense. This suggests that only 5% of those who received the violation attempted to contest it.</p>
+                <div class="faq">
+                  <h5 class="font-weight-bold m-0">
+                    How many people have challenged this appeal in the past?
+                  </h5>
+                  <p class="font-weight-medium m-0">
+                    According to the pie chart presented above, a total of 4,518
+                    appeals have been recorded for this particular offense. This
+                    suggests that only 5% of those who received the violation
+                    attempted to contest it.
+                  </p>
                 </div>
               </div>
             </div>
@@ -129,36 +245,84 @@
 
           <!-- Accordion item 3 -->
           <div class="card">
-            <div id="headingThree" class="card-header bg-white shadow-sm border-0">
-              <h4 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseThree"
-                  aria-expanded="false" aria-controls="collapseThree"
-                  class="d-block position-relative collapsed text-dark collapsible-link py-2">Parking/standing
-                  prohibited anytime</a></h4>
+            <div
+              id="headingThree"
+              class="card-header bg-white shadow-sm border-0">
+              <h4 class="mb-0 font-weight-bold">
+                <a
+                  href="#"
+                  data-toggle="collapse"
+                  data-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                  class="d-block position-relative collapsed text-dark collapsible-link py-2"
+                  >Parking/standing prohibited anytime</a
+                >
+              </h4>
             </div>
-            <div id="collapseThree" aria-labelledby="headingThree" data-parent="#accordionExample" class="collapse">
+            <div
+              id="collapseThree"
+              aria-labelledby="headingThree"
+              data-parent="#accordionExample"
+              class="collapse">
               <div class="card-body p-5">
-                <div class = "faq">
+                <div class="faq">
                   <h5 class="font-weight-bold m-0">What is this offense?</h5>
-                  <p class="font-weight-medium m-0">This violation refers to parking or standing a vehicle in an area where it is prohibited at any time. This can include areas such as fire lanes, bus stops, or areas marked with "No Parking" signs.</p>
+                  <p class="font-weight-medium m-0">
+                    This violation refers to parking or standing a vehicle in an
+                    area where it is prohibited at any time. This can include
+                    areas such as fire lanes, bus stops, or areas marked with
+                    "No Parking" signs.
+                  </p>
                 </div>
-                <div class = "faq">
-                  <h5 class="font-weight-bold m-0">Why is this violation common in Ward 44?</h5>
-                  <p class="font-weight-medium m-0">Parking/standing prohibited anytime is a common violation in Ward 44 because there are many areas where parking and standing are prohibited due to safety and traffic flow concerns. Additionally, the ward is home to popular attractions like Wrigley Field, which increases traffic and parking congestion in the area. The ward also has a high population density, which means more vehicles are vying for limited parking spots, leading to an increased likelihood of parking in restricted areas.</p>
+                <div class="faq">
+                  <h5 class="font-weight-bold m-0">
+                    Why is this violation common in Ward 44?
+                  </h5>
+                  <p class="font-weight-medium m-0">
+                    Parking/standing prohibited anytime is a common violation in
+                    Ward 44 because there are many areas where parking and
+                    standing are prohibited due to safety and traffic flow
+                    concerns. Additionally, the ward is home to popular
+                    attractions like Wrigley Field, which increases traffic and
+                    parking congestion in the area. The ward also has a high
+                    population density, which means more vehicles are vying for
+                    limited parking spots, leading to an increased likelihood of
+                    parking in restricted areas.
+                  </p>
                 </div>
-                <div class = "faq">
-                  <h5 class="font-weight-bold m-0">What is the success rate for this appeal?</h5>
+                <div class="faq">
+                  <h5 class="font-weight-bold m-0">
+                    What is the success rate for this appeal?
+                  </h5>
                   <div class="text-center">
-                  <figure class="figure w-50">
-                    <img alt="Pie chart showing percentage of dismissed and liable parking/standing prohibited anytime violations that have been appealed in ward 44" class="img-fluid"
-                    src="assets/parking_standing prohibited.png" />
-                    <figcaption class="figure-caption">Hearing results of contested parking/standing prohibited anytime parking violation appeals in ward 44 since 1996. (Credit: ProPublica)</figcaption>
-                  </figure>
+                    <figure class="figure w-50">
+                      <img
+                        alt="Pie chart showing percentage of dismissed and liable parking/standing prohibited anytime violations that have been appealed in ward 44"
+                        class="img-fluid"
+                        src="assets/parking_standingprohibited.png">
+                      <figcaption class="figure-caption">
+                        Hearing results of contested parking/standing prohibited
+                        anytime parking violation appeals in ward 44 since 1996.
+                        (Credit: ProPublica)
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <p class="font-weight-medium m-0">
+                    58% of the contested parking violations in ward 44 have
+                    successfully been dismissed.
+                  </p>
                 </div>
-                  <p class="font-weight-medium m-0">58% of the contested parking violations in ward 44 have successfully been dismissed.</p>
-                </div>
-                <div class = "faq">
-                  <h5 class="font-weight-bold m-0">How many people have challenged this appeal in the past?</h5>
-                  <p class="font-weight-medium m-0">According to the pie chart presented above, a total of 5,448 appeals have been recorded for this particular offense. This suggests that only 7% of those who received the violation attempted to contest it.</p>
+                <div class="faq">
+                  <h5 class="font-weight-bold m-0">
+                    How many people have challenged this appeal in the past?
+                  </h5>
+                  <p class="font-weight-medium m-0">
+                    According to the pie chart presented above, a total of 5,448
+                    appeals have been recorded for this particular offense. This
+                    suggests that only 7% of those who received the violation
+                    attempted to contest it.
+                  </p>
                 </div>
               </div>
             </div>
@@ -166,36 +330,84 @@
 
           <!-- Accordion item 4 -->
           <div class="card">
-            <div id="headingFour" class="card-header bg-white shadow-sm border-0">
-              <h4 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseFour"
-                  aria-expanded="false" aria-controls="collapseFour"
-                  class="d-block position-relative collapsed text-dark collapsible-link py-2">Expired
-                  meter non-central business district</a></h4>
+            <div
+              id="headingFour"
+              class="card-header bg-white shadow-sm border-0">
+              <h4 class="mb-0 font-weight-bold">
+                <a
+                  href="#"
+                  data-toggle="collapse"
+                  data-target="#collapseFour"
+                  aria-expanded="false"
+                  aria-controls="collapseFour"
+                  class="d-block position-relative collapsed text-dark collapsible-link py-2"
+                  >Expired meter non-central business district</a
+                >
+              </h4>
             </div>
-            <div id="collapseFour" aria-labelledby="headingFour" data-parent="#accordionExample" class="collapse">
+            <div
+              id="collapseFour"
+              aria-labelledby="headingFour"
+              data-parent="#accordionExample"
+              class="collapse">
               <div class="card-body p-5">
-                <div class = "faq">
+                <div class="faq">
                   <h5 class="font-weight-bold m-0">What is this offense?</h5>
-                  <p class="font-weight-medium m-0">The violation refers to parking at a metered space in a non-central business district and allowing the meter to expire without adding more money to it.</p>
+                  <p class="font-weight-medium m-0">
+                    The violation refers to parking at a metered space in a
+                    non-central business district and allowing the meter to
+                    expire without adding more money to it.
+                  </p>
                 </div>
-                <div class = "faq">
-                  <h5 class="font-weight-bold m-0">Why is this violation common in Ward 44?</h5>
-                  <p class="font-weight-medium m-0">This violation is common in Ward 44 because it is a heavily populated and urban area with limited parking availability. The ward also contains several popular tourist attractions and entertainment venues, such as Wrigley Field stadium and the Lakefront Trail, which attracts a lot of visitors and causes increased traffic congestion. Additionally, the ward is located in a high traffic area near downtown Chicago, where parking regulations are strictly enforced. All these factors contribute to a high number of expired meter violations in Ward 44.</p>
+                <div class="faq">
+                  <h5 class="font-weight-bold m-0">
+                    Why is this violation common in Ward 44?
+                  </h5>
+                  <p class="font-weight-medium m-0">
+                    This violation is common in Ward 44 because it is a heavily
+                    populated and urban area with limited parking availability.
+                    The ward also contains several popular tourist attractions
+                    and entertainment venues, such as Wrigley Field stadium and
+                    the Lakefront Trail, which attracts a lot of visitors and
+                    causes increased traffic congestion. Additionally, the ward
+                    is located in a high traffic area near downtown Chicago,
+                    where parking regulations are strictly enforced. All these
+                    factors contribute to a high number of expired meter
+                    violations in Ward 44.
+                  </p>
                 </div>
-                <div class = "faq">
-                  <h5 class="font-weight-bold m-0">What is the success rate for this appeal?</h5>
+                <div class="faq">
+                  <h5 class="font-weight-bold m-0">
+                    What is the success rate for this appeal?
+                  </h5>
                   <div class="text-center">
-                  <figure class="figure w-50">
-                    <img alt="Pie chart showing percentage of dismissed and liable expired meter non-central business district violations that have been appealed in ward 44" class="img-fluid"
-                    src="assets/expired meter.png" />
-                    <figcaption class="figure-caption">Hearing results of contested expired meter non-central business district parking violation appeals in ward 44 since 1996. (Credit: ProPublica)</figcaption>
-                  </figure>
+                    <figure class="figure w-50">
+                      <img
+                        alt="Pie chart showing percentage of dismissed and liable expired meter non-central business district violations that have been appealed in ward 44"
+                        class="img-fluid"
+                        src="assets/expiredmeter.png">
+                      <figcaption class="figure-caption">
+                        Hearing results of contested expired meter non-central
+                        business district parking violation appeals in ward 44
+                        since 1996. (Credit: ProPublica)
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <p class="font-weight-medium m-0">
+                    63% of the contested parking violations in ward 44 have
+                    successfully been dismissed.
+                  </p>
                 </div>
-                <p class="font-weight-medium m-0">63% of the contested parking violations in ward 44 have successfully been dismissed.</p>
-              </div>
-                <div class = "faq">
-                  <h5 class="font-weight-bold m-0">How many people have challenged this appeal in the past?</h5>
-                  <p class="font-weight-medium m-0">According to the pie chart presented above, a total of 4,045 appeals have been recorded for this particular offense. This suggests that only 5% of those who received the violation attempted to contest it.</p>
+                <div class="faq">
+                  <h5 class="font-weight-bold m-0">
+                    How many people have challenged this appeal in the past?
+                  </h5>
+                  <p class="font-weight-medium m-0">
+                    According to the pie chart presented above, a total of 4,045
+                    appeals have been recorded for this particular offense. This
+                    suggests that only 5% of those who received the violation
+                    attempted to contest it.
+                  </p>
                 </div>
               </div>
             </div>
@@ -203,51 +415,99 @@
 
           <!-- Accordion item 5 -->
           <div class="card">
-            <div id="headingFive" class="card-header bg-white shadow-sm border-0">
-              <h4 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseFive"
-                  aria-expanded="false" aria-controls="collapseFive"
-                  class="d-block position-relative collapsed text-dark collapsible-link py-2">Residential
-                  permit parking</a></h4>
+            <div
+              id="headingFive"
+              class="card-header bg-white shadow-sm border-0">
+              <h4 class="mb-0 font-weight-bold">
+                <a
+                  href="#"
+                  data-toggle="collapse"
+                  data-target="#collapseFive"
+                  aria-expanded="false"
+                  aria-controls="collapseFive"
+                  class="d-block position-relative collapsed text-dark collapsible-link py-2"
+                  >Residential permit parking</a
+                >
+              </h4>
             </div>
-            <div id="collapseFive" aria-labelledby="headingFive" data-parent="#accordionExample" class="collapse">
+            <div
+              id="collapseFive"
+              aria-labelledby="headingFive"
+              data-parent="#accordionExample"
+              class="collapse">
               <div class="card-body p-5">
-                <div class = "faq">
+                <div class="faq">
                   <h5 class="font-weight-bold m-0">What is this offense?</h5>
-                  <p class="font-weight-medium m-0">Residential permit parking is a parking violation where a driver parks in a designated residential permit parking zone without a valid permit. These zones are usually established in residential areas where parking is limited due to high demand.</p>
+                  <p class="font-weight-medium m-0">
+                    Residential permit parking is a parking violation where a
+                    driver parks in a designated residential permit parking zone
+                    without a valid permit. These zones are usually established
+                    in residential areas where parking is limited due to high
+                    demand.
+                  </p>
                 </div>
-                <div class = "faq">
-                  <h5 class="font-weight-bold m-0">Why is this violation common in Ward 44?</h5>
-                  <p class="font-weight-medium m-0">This violation is common in Ward 44 because it is a residential area with limited street parking available. Many residents of the ward have obtained residential parking permits that allow them to park on certain streets during designated hours. Non-permit holders who park in these areas during restricted times may receive a ticket for violating the residential permit parking regulations. Additionally, the ward has a high population density and many multi-unit residential buildings, which further increases the demand for limited street parking.</p>
+                <div class="faq">
+                  <h5 class="font-weight-bold m-0">
+                    Why is this violation common in Ward 44?
+                  </h5>
+                  <p class="font-weight-medium m-0">
+                    This violation is common in Ward 44 because it is a
+                    residential area with limited street parking available. Many
+                    residents of the ward have obtained residential parking
+                    permits that allow them to park on certain streets during
+                    designated hours. Non-permit holders who park in these areas
+                    during restricted times may receive a ticket for violating
+                    the residential permit parking regulations. Additionally,
+                    the ward has a high population density and many multi-unit
+                    residential buildings, which further increases the demand
+                    for limited street parking.
+                  </p>
                 </div>
-                <div class = "faq">
-                  <h5 class="font-weight-bold m-0">What is the success rate for this appeal?</h5>
+                <div class="faq">
+                  <h5 class="font-weight-bold m-0">
+                    What is the success rate for this appeal?
+                  </h5>
                   <div class="text-center">
-                  <figure class="figure w-50">
-                    <img alt="Pie chart showing percentage of dismissed and liable residential permit parking violations that have been appealed in ward 44" class="img-fluid"
-                    src="assets/residential permit parking.png" />
-                    <figcaption class="figure-caption">Hearing results of contested residential permit parking violation appeals in ward 44 since 1996. (Credit: ProPublica)</figcaption>
-                  </figure>
+                    <figure class="figure w-50">
+                      <img
+                        alt="Pie chart showing percentage of dismissed and liable residential permit parking violations that have been appealed in ward 44"
+                        class="img-fluid"
+                        src="assets/residentialpermitparking.png">
+                      <figcaption class="figure-caption">
+                        Hearing results of contested residential permit parking
+                        violation appeals in ward 44 since 1996. (Credit:
+                        ProPublica)
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <p class="font-weight-medium m-0">
+                    59% of the contested parking violations in ward 44 have
+                    successfully been dismissed.
+                  </p>
                 </div>
-                  <p class="font-weight-medium m-0">59% of the contested parking violations in ward 44 have successfully been dismissed.</p>
-                </div>
-                <div class = "faq">
-                  <h5 class="font-weight-bold m-0">How many people have challenged this appeal in the past?</h5>
-                  <p class="font-weight-medium m-0">According to the pie chart presented above, a total of 6,160 appeals have been recorded for this particular offense. This suggests that only 9% of those who received the violation attempted to contest it.</p>
+                <div class="faq">
+                  <h5 class="font-weight-bold m-0">
+                    How many people have challenged this appeal in the past?
+                  </h5>
+                  <p class="font-weight-medium m-0">
+                    According to the pie chart presented above, a total of 6,160
+                    appeals have been recorded for this particular offense. This
+                    suggests that only 9% of those who received the violation
+                    attempted to contest it.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
-
         </div>
       </div>
-    </div>
-    </div>
-    </div>
-  </main>
-  <footer class="text-white text-center text-lg-start">
-    <p>© 2023 Take It to the Streets</p>
-    <p>Angelica Madera, Jason Cheng, Ryan Manthy and Sean Cummings | Technical Communication Final Project</p>
-  </footer>
-</body>
-
+    </main>
+    <footer class="text-white text-center text-lg-start">
+      <p>© 2023 Take It to the Streets</p>
+      <p>
+        Angelica Madera, Jason Cheng, Ryan Manthy and Sean Cummings | Technical
+        Communication Final Project
+      </p>
+    </footer>
+  </body>
 </html>

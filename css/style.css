@@ -10,7 +10,6 @@ main {
   background-color: #f1f1f1;
 }
 
-/* Used ChatGPT as a reference for styling the body */
 body::before {
   left: calc(50% - 600px);
   width: calc(50% - 650px);
@@ -21,16 +20,15 @@ body::after {
   width: calc(50% - 650px);
 }
 
-
 body::before,
 body::after {
-  content: "";
+  content: '';
   display: block;
   position: fixed;
   top: 0;
   bottom: 0;
   width: 100%;
-  background-color: #629BBC;
+  background-color: #629bbc;
   z-index: -1;
 }
 
@@ -65,7 +63,7 @@ footer {
   padding: 1em 3em;
 }
 
-footer>p {
+footer > p {
   margin-bottom: 0;
 }
 
@@ -75,24 +73,22 @@ nav.pagination {
 }
 
 nav.navbar {
-  background-color: #001B2E;
-  position: sticky
+  background-color: #001b2e;
+  position: sticky;
 }
 
 a:focus {
   outline: none !important;
-  border: 1px solid #ADB6C4;
-  box-shadow: 0 0 5px #719ECE;
+  border: 1px solid #adb6c4;
+  box-shadow: 0 0 5px #719ece;
 }
 
 .navbar-dark a.navbar-brand,
 .navbar-dark a.navbar-brand:focus,
 .navbar-dark a.navbar-brand:active {
-  color: #FFEFD3;
+  color: #ffefd3;
   font-family: 'Staatliches', cursive;
-  text-shadow: -1px 1px 2px #000,
-    1px 1px 2px #000,
-    1px -1px 0 #000,
+  text-shadow: -1px 1px 2px #000, 1px 1px 2px #000, 1px -1px 0 #000,
     -1px -1px 0 #000;
   padding-left: 0.5em;
   padding-right: 0.5em;
@@ -112,11 +108,9 @@ a:focus {
 }
 
 #brand {
-  color: #FFEFD3;
+  color: #ffefd3;
   font-size: 3.5em;
-  text-shadow: -1px 1px 2px #000,
-    1px 1px 2px #000,
-    1px -1px 0 #000,
+  text-shadow: -1px 1px 2px #000, 1px 1px 2px #000, 1px -1px 0 #000,
     -1px -1px 0 #000;
   font-family: 'Staatliches', cursive;
   text-align: center;
@@ -132,20 +126,24 @@ div.card-body {
 
 .mask {
   height: 400px;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .mt-5 {
   margin: 3rem auto 3rem;
 }
 
+h1:not(#brand),
 h2,
 h3,
 h4,
 h5,
 h6,
 p,
+li,
 a.nav-link,
-figcaption {
+figcaption,
+label {
   font-family: 'Nunito', sans-serif !important;
 }
 
@@ -172,7 +170,6 @@ div.padding {
   transition: all 0.3s;
 }
 
-/* Vertical line */
 .collapsible-link::after {
   content: '';
   width: 2px;
@@ -198,5 +195,93 @@ div.padding {
 }
 
 .collapse > .p-5 {
-  padding: 1.5em!important;
+  padding: 1.5em !important;
+}
+
+.card-appeal {
+  padding: 2em;
+}
+
+#appeal {
+  margin-bottom: 1.5em;
+}
+
+#arrowed-cta {
+  background-color: #adb6c4;
+}
+
+ul {
+  list-style: none;
+}
+
+#arrowed-cta-links {
+  margin-top: 2em;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+#arrowed-cta-links > li:not(:last-child) {
+  padding-bottom: 2em;
+}
+
+#arrowed-cta-links > li > a > svg {
+  height: 1.1em;
+  width: 1.1em;
+}
+
+.icon {
+  display: inline-flex;
+  align-self: center;
+}
+
+.icon svg,
+.icon img {
+  height: 1em;
+  width: 1em;
+  fill: currentColor;
+}
+
+.icon.baseline svg,
+.icon img {
+  top: 0.125em;
+  position: relative;
+}
+
+#arrowed-cta-links > li > a {
+  color: #001b2e;
+  text-decoration: underline;
+}
+
+.accordion .card-body > a,
+.accordion .card-body > ol > li > a,
+.accordion .card-body > p > a {
+  color: #629bbc;
+  text-decoration: underline;
+}
+
+#arrowed-cta-links > li > a:hover,
+#arrowed-cta-links > li > a:focus {
+  color: #001b2e;
+  text-decoration: none;
+}
+
+.accordion .card-body > a:hover,
+.accordion .card-body > a:focus,
+.accordion .card-body > ol > li > a:hover,
+.accordion .card-body > ol > li > a:focus .accordion .card-body > p > a:hover,
+.accordion .card-body > p > a:focus {
+  color: #629bbc;
+  text-decoration: none;
+}
+
+.send {
+  color: #fff;
+  background-color: #001b2e;
+  border-color: #001b2e;
+}
+
+.send:hover {
+  color: #001b2e;
+  background-color: #adb6c4;
+  border-color: #001b2e;
 }
