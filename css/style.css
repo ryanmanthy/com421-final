@@ -285,3 +285,14 @@ ul {
   background-color: #adb6c4;
   border-color: #001b2e;
 }
+
+p.sidebar {
+  background-color: #ffe6e6;
+  border-left: .4em solid #ffcccc;
+  padding: 1em;
+  margin: 1em;
+}
+
+p.strong {
+  font-weight: bold;
+}
